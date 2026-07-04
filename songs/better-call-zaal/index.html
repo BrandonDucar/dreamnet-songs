@@ -99,6 +99,22 @@
         aspect-ratio: 16 / 9;
       }
 
+      .video-panel {
+        margin-top: 18px;
+        border: 1px solid rgba(255, 209, 102, 0.26);
+        border-radius: 8px;
+        padding: 14px;
+        background: rgba(255, 209, 102, 0.07);
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 6px;
+        background: #05070b;
+      }
+
       .actions {
         display: flex;
         flex-wrap: wrap;
@@ -222,6 +238,13 @@
               Hosted audio is being checked. If the player does not appear, use the Suno link while the export is being deployed.
             </p>
           </div>
+          <div class="video-panel" id="videoPanel" hidden>
+            <strong>Hosted Suno video</strong>
+            <video id="videoPlayer" controls preload="metadata" poster="./assets/better-call-zaal-cover.svg">
+              <source src="./assets/better-call-zaal.mp4" type="video/mp4" />
+            </video>
+            <p class="audio-note">The exported Suno MP4 is hosted here for direct sharing and proof screenshots.</p>
+          </div>
         </div>
         <div class="cover">
           <img src="./assets/better-call-zaal-cover.svg" alt="Better Call Zaal cover art" />
@@ -232,8 +255,8 @@
         <article class="card">
           <h2>Track Notes</h2>
           <p><strong>Source:</strong> Suno Pro generation</p>
-          <p><strong>Status:</strong> <span class="stamp">Public Suno link staged</span></p>
-          <p><strong>Export:</strong> MP3/WAV pending from Suno</p>
+          <p><strong>Status:</strong> <span class="stamp">Hosted song drop live</span></p>
+          <p><strong>Export:</strong> WAV audio and MP4 video hosted on this page</p>
         </article>
 
         <article class="card">
@@ -283,6 +306,15 @@ Tag on X: @bettercallzaal`;
         { path: "./assets/better-call-zaal.wav", label: "WAV export is hosted on this page." },
       ];
 
+      async function enableHostedVideo() {
+        try {
+          const response = await fetch("./assets/better-call-zaal.mp4", { method: "HEAD" });
+          const contentType = response.headers.get("content-type") || "";
+          if (!response.ok || !contentType.startsWith("video/")) return;
+          document.getElementById("videoPanel").hidden = false;
+        } catch {}
+      }
+
       async function enableHostedAudio() {
         for (const candidate of audioCandidates) {
           try {
@@ -299,6 +331,7 @@ Tag on X: @bettercallzaal`;
         }
       }
 
+      enableHostedVideo();
       enableHostedAudio();
     </script>
   </body>
