@@ -10,17 +10,26 @@
     "publicUrl": "https://suno.com/s/wfNxFCTMgUF3OMAI",
     "resolvedTitle": "Better Call Zaal",
     "observedAuthor": "brandonducar1234",
-    "audioExportStatus": "audio_slot_ready_pending_user_export"
+    "audioExportStatus": "wav_export_hosted"
   },
   "description": "A builder anthem for ZABAL Gamez, Proof Drop, and shipping work in public.",
   "status": "public_suno_link_staged",
   "rightsNote": "Created by Brandon in Suno Pro. Confirm final release terms against the active Suno subscription and exported audio file before distribution.",
   "links": {
     "livePage": "https://dreamnet-songs.pages.dev/songs/better-call-zaal/",
-    "plannedAudioPath": "https://dreamnet-songs.pages.dev/songs/better-call-zaal/assets/better-call-zaal.mp3",
+    "hostedAudio": "https://dreamnet-songs.pages.dev/songs/better-call-zaal/assets/better-call-zaal.wav",
+    "plannedMp3Path": "https://dreamnet-songs.pages.dev/songs/better-call-zaal/assets/better-call-zaal.mp3",
     "suno": "https://suno.com/s/wfNxFCTMgUF3OMAI",
     "zabalGamez": "https://zabalgamez.com",
     "proofDrop": "https://proof-drop-zabal.pages.dev"
+  },
+  "audio": {
+    "file": "assets/better-call-zaal.wav",
+    "format": "wav",
+    "sha256": "51deb5c66cb07fbccda13e21f3097570b93968f1e9b2ee20c2e102177d92ec8a",
+    "sizeBytes": 20271404,
+    "sourceMaster": "full-quality Suno WAV export retained locally outside the public repo",
+    "webEncoding": "24 kHz stereo WAV derived from the Suno export for Cloudflare Pages file-size compatibility."
   },
   "createdAt": "2026-07-04T00:00:00-04:00"
 }

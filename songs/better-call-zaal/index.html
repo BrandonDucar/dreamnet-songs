@@ -219,8 +219,7 @@
               <source src="./assets/better-call-zaal.mp3" type="audio/mpeg" />
             </audio>
             <p class="audio-note" id="audioNote">
-              The Suno link is live. Export the MP3 from Suno and place it at
-              <code>songs/better-call-zaal/assets/better-call-zaal.mp3</code> to enable hosted playback here.
+              Hosted audio is being checked. If the player does not appear, use the Suno link while the export is being deployed.
             </p>
           </div>
         </div>
@@ -279,16 +278,28 @@ Tag on X: @bettercallzaal`;
         document.getElementById("copy").textContent = "Checklist copied";
       });
 
-      const audioPath = "./assets/better-call-zaal.mp3";
-      fetch(audioPath, { method: "HEAD" })
-        .then((response) => {
-          const contentType = response.headers.get("content-type") || "";
-          if (!response.ok || !contentType.startsWith("audio/")) return;
-          document.getElementById("audioPlayer").hidden = false;
-          document.getElementById("audioTitle").textContent = "Hosted audio";
-          document.getElementById("audioNote").textContent = "MP3 export is hosted on this page.";
-        })
-        .catch(() => {});
+      const audioCandidates = [
+        { path: "./assets/better-call-zaal.mp3", label: "MP3 export is hosted on this page." },
+        { path: "./assets/better-call-zaal.wav", label: "WAV export is hosted on this page." },
+      ];
+
+      async function enableHostedAudio() {
+        for (const candidate of audioCandidates) {
+          try {
+            const response = await fetch(candidate.path, { method: "HEAD" });
+            const contentType = response.headers.get("content-type") || "";
+            if (!response.ok || !contentType.startsWith("audio/")) continue;
+            const player = document.getElementById("audioPlayer");
+            player.src = candidate.path;
+            player.hidden = false;
+            document.getElementById("audioTitle").textContent = "Hosted audio";
+            document.getElementById("audioNote").textContent = candidate.label;
+            return;
+          } catch {}
+        }
+      }
+
+      enableHostedAudio();
     </script>
   </body>
 </html>
