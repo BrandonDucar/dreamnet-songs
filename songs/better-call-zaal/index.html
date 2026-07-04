@@ -240,10 +240,18 @@
           </div>
           <div class="video-panel" id="videoPanel" hidden>
             <strong>Hosted Suno video</strong>
-            <video id="videoPlayer" controls preload="metadata" poster="./assets/better-call-zaal-cover.svg">
+            <video
+              id="videoPlayer"
+              controls
+              autoplay
+              muted
+              playsinline
+              preload="auto"
+              poster="./assets/better-call-zaal-cover.svg"
+            >
               <source src="./assets/better-call-zaal.mp4" type="video/mp4" />
             </video>
-            <p class="audio-note">The exported Suno MP4 is hosted here for direct sharing and proof screenshots.</p>
+            <p class="audio-note">Autoplay starts muted. Tap the player to turn the sound on.</p>
           </div>
         </div>
         <div class="cover">
@@ -312,6 +320,9 @@ Tag on X: @bettercallzaal`;
           const contentType = response.headers.get("content-type") || "";
           if (!response.ok || !contentType.startsWith("video/")) return;
           document.getElementById("videoPanel").hidden = false;
+          const player = document.getElementById("videoPlayer");
+          player.muted = true;
+          await player.play().catch(() => {});
         } catch {}
       }
 
