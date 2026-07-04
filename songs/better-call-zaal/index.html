@@ -282,7 +282,8 @@ Tag on X: @bettercallzaal`;
       const audioPath = "./assets/better-call-zaal.mp3";
       fetch(audioPath, { method: "HEAD" })
         .then((response) => {
-          if (!response.ok) return;
+          const contentType = response.headers.get("content-type") || "";
+          if (!response.ok || !contentType.startsWith("audio/")) return;
           document.getElementById("audioPlayer").hidden = false;
           document.getElementById("audioTitle").textContent = "Hosted audio";
           document.getElementById("audioNote").textContent = "MP3 export is hosted on this page.";
