@@ -10,3 +10,5 @@ songs/**/assets/*.wav
 songs/**/assets/*.mp3
 songs/**/assets/*.flac
 
+!songs/better-call-zaal/assets/better-call-zaal.mp3
+!songs/better-call-zaal/assets/better-call-zaal.wav

@@ -171,6 +171,25 @@
         margin-top: 16px;
       }
 
+      .audio-panel {
+        margin-top: 18px;
+        border: 1px solid rgba(80, 227, 255, 0.24);
+        border-radius: 8px;
+        padding: 14px;
+        background: rgba(80, 227, 255, 0.06);
+      }
+
+      audio {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .audio-note {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
       @media (max-width: 860px) {
         .hero,
         .grid {
@@ -193,6 +212,16 @@
             <a class="button secondary" href="./metadata.json">Metadata JSON</a>
             <a class="button secondary" href="./lyrics.md">Lyrics</a>
             <button class="secondary" id="copy">Copy POIDH checklist</button>
+          </div>
+          <div class="audio-panel" id="audioPanel">
+            <strong id="audioTitle">Hosted audio pending</strong>
+            <audio id="audioPlayer" controls preload="metadata" hidden>
+              <source src="./assets/better-call-zaal.mp3" type="audio/mpeg" />
+            </audio>
+            <p class="audio-note" id="audioNote">
+              The Suno link is live. Export the MP3 from Suno and place it at
+              <code>songs/better-call-zaal/assets/better-call-zaal.mp3</code> to enable hosted playback here.
+            </p>
           </div>
         </div>
         <div class="cover">
@@ -249,7 +278,16 @@ Tag on X: @bettercallzaal`;
         await navigator.clipboard.writeText(checklist);
         document.getElementById("copy").textContent = "Checklist copied";
       });
+
+      const audioPath = "./assets/better-call-zaal.mp3";
+      fetch(audioPath, { method: "HEAD" })
+        .then((response) => {
+          if (!response.ok) return;
+          document.getElementById("audioPlayer").hidden = false;
+          document.getElementById("audioTitle").textContent = "Hosted audio";
+          document.getElementById("audioNote").textContent = "MP3 export is hosted on this page.";
+        })
+        .catch(() => {});
     </script>
   </body>
 </html>
-
