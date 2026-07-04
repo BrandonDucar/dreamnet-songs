@@ -6,10 +6,10 @@
   "sourceUrl": "https://suno.com/s/wfNxFCTMgUF3OMAI",
   "sourcePlatform": "Suno",
   "repoPath": "songs/better-call-zaal",
-  "publicPageStatus": "pending_deploy",
+  "publicPageStatus": "live",
+  "publicUrl": "https://dreamnet-songs.pages.dev/songs/better-call-zaal/",
   "audioFileStatus": "pending_user_export_from_suno",
   "proofDropRecommended": true,
   "createdBy": "Brandon / GhostmintOps",
   "generatedAt": "2026-07-04T00:00:00-04:00"
 }
-

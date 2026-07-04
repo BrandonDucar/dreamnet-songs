@@ -6,6 +6,11 @@ Song drops, metadata, receipts, and live pages for DreamStar, ZABAL Gamez, Droid
 
 - `Better Call Zaal` - ZABAL builder anthem generated in Suno and staged as a public song page.
 
+## Live Site
+
+- Catalog: `https://dreamnet-songs.pages.dev/`
+- Better Call Zaal: `https://dreamnet-songs.pages.dev/songs/better-call-zaal/`
+
 ## Repo Pattern
 
 Each song should include:
@@ -26,4 +31,3 @@ This repo is a static site and can be deployed to Cloudflare Pages:
 ```bash
 wrangler pages deploy . --project-name dreamnet-songs
 ```
-
