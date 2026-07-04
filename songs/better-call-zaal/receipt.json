@@ -1,0 +1,15 @@
+{
+  "schema": "dreamnet.song_receipt.v1",
+  "title": "Better Call Zaal",
+  "event": "ZABAL Gamez July Open Build Month",
+  "track": "Artist",
+  "sourceUrl": "https://suno.com/s/wfNxFCTMgUF3OMAI",
+  "sourcePlatform": "Suno",
+  "repoPath": "songs/better-call-zaal",
+  "publicPageStatus": "pending_deploy",
+  "audioFileStatus": "pending_user_export_from_suno",
+  "proofDropRecommended": true,
+  "createdBy": "Brandon / GhostmintOps",
+  "generatedAt": "2026-07-04T00:00:00-04:00"
+}
+

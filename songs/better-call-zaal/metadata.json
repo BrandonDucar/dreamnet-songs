@@ -1,0 +1,25 @@
+{
+  "schema": "dreamnet.song_drop.v1",
+  "title": "Better Call Zaal",
+  "artist": "Brandon / GhostmintOps",
+  "project": "DreamNet Songs",
+  "event": "ZABAL Gamez July Open Build Month",
+  "track": "Artist",
+  "source": {
+    "platform": "Suno",
+    "publicUrl": "https://suno.com/s/wfNxFCTMgUF3OMAI",
+    "resolvedTitle": "Better Call Zaal",
+    "observedAuthor": "brandonducar1234",
+    "audioExportStatus": "pending_user_export"
+  },
+  "description": "A builder anthem for ZABAL Gamez, Proof Drop, and shipping work in public.",
+  "status": "public_suno_link_staged",
+  "rightsNote": "Created by Brandon in Suno Pro. Confirm final release terms against the active Suno subscription and exported audio file before distribution.",
+  "links": {
+    "suno": "https://suno.com/s/wfNxFCTMgUF3OMAI",
+    "zabalGamez": "https://zabalgamez.com",
+    "proofDrop": "https://proof-drop-zabal.pages.dev"
+  },
+  "createdAt": "2026-07-04T00:00:00-04:00"
+}
+

@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Better Call Zaal cover art</title>
+  <desc id="desc">A dark concert-style cover with bright builder lights and the title Better Call Zaal.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#06070b"/>
+      <stop offset="0.44" stop-color="#161021"/>
+      <stop offset="1" stop-color="#05151c"/>
+    </linearGradient>
+    <linearGradient id="hot" x1="0" x2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="0.5" stop-color="#ff5ca8"/>
+      <stop offset="1" stop-color="#50e3ff"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <circle cx="260" cy="150" r="220" fill="#ff5ca8" opacity="0.16"/>
+  <circle cx="1290" cy="210" r="260" fill="#50e3ff" opacity="0.14"/>
+  <circle cx="820" cy="780" r="380" fill="#ffd166" opacity="0.09"/>
+  <g opacity="0.2">
+    <path d="M0 720 C280 610 390 760 640 650 S1120 580 1600 700" fill="none" stroke="#50e3ff" stroke-width="3"/>
+    <path d="M0 780 C260 690 430 820 710 710 S1140 650 1600 760" fill="none" stroke="#ff5ca8" stroke-width="3"/>
+  </g>
+  <g filter="url(#glow)">
+    <rect x="146" y="145" width="1308" height="610" rx="26" fill="none" stroke="url(#hot)" stroke-width="5" opacity="0.72"/>
+  </g>
+  <text x="142" y="255" fill="#50e3ff" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="10">ZABAL GAMEZ ANTHEM</text>
+  <text x="132" y="438" fill="#f8efe4" font-family="Inter, Arial, sans-serif" font-size="132" font-weight="950" letter-spacing="-4">BETTER</text>
+  <text x="132" y="575" fill="url(#hot)" font-family="Inter, Arial, sans-serif" font-size="132" font-weight="950" letter-spacing="-4">CALL ZAAL</text>
+  <text x="140" y="675" fill="#c7d2dd" font-family="Inter, Arial, sans-serif" font-size="36" font-weight="650">built out loud / proof in the crowd</text>
+  <g transform="translate(1160 530)">
+    <rect x="0" y="0" width="220" height="112" rx="18" fill="#0d1118" stroke="#ffffff" stroke-opacity="0.2"/>
+    <circle cx="58" cy="56" r="28" fill="#ffd166"/>
+    <rect x="103" y="35" width="80" height="12" rx="6" fill="#50e3ff"/>
+    <rect x="103" y="62" width="58" height="12" rx="6" fill="#ff5ca8"/>
+  </g>
+</svg>
+

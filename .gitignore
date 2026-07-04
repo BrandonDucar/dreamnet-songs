@@ -1,0 +1,12 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.wrangler/
+*.log
+
+# Large exported masters can be added intentionally later.
+# Keep source pages and metadata lightweight by default.
+songs/**/assets/*.wav
+songs/**/assets/*.mp3
+songs/**/assets/*.flac
+
