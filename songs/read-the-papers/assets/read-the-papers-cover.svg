@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07090d"/>
+      <stop offset="50%" stop-color="#0f1622"/>
+      <stop offset="100%" stop-color="#07090d"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd166"/>
+      <stop offset="50%" stop-color="#ff5ca8"/>
+      <stop offset="100%" stop-color="#50e3ff"/>
+    </linearGradient>
+    <linearGradient id="paperGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1b2732"/>
+      <stop offset="100%" stop-color="#141e27"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+
+  <!-- Decorative Grid / Lines -->
+  <g opacity="0.08">
+    <line x1="0" y1="50" x2="800" y2="50" stroke="#f8efe4" stroke-width="1"/>
+    <line x1="0" y1="150" x2="800" y2="150" stroke="#f8efe4" stroke-width="1"/>
+    <line x1="0" y1="250" x2="800" y2="250" stroke="#f8efe4" stroke-width="1"/>
+    <line x1="0" y1="350" x2="800" y2="350" stroke="#f8efe4" stroke-width="1"/>
+    <line x1="100" y1="0" x2="100" y2="450" stroke="#f8efe4" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="450" stroke="#f8efe4" stroke-width="1"/>
+    <line x1="500" y1="0" x2="500" y2="450" stroke="#f8efe4" stroke-width="1"/>
+    <line x1="700" y1="0" x2="700" y2="450" stroke="#f8efe4" stroke-width="1"/>
+  </g>
+
+  <!-- Glowing background elements -->
+  <circle cx="650" cy="150" r="120" fill="#50e3ff" opacity="0.15" filter="url(#glow)"/>
+  <circle cx="150" cy="300" r="140" fill="#ff5ca8" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Abstract Paper Sheets -->
+  <g transform="translate(480, 80) rotate(15)">
+    <!-- Sheet 3 (Back) -->
+    <rect x="-20" y="20" width="160" height="220" rx="8" fill="url(#paperGrad)" stroke="rgba(255,255,255,0.06)" stroke-width="2" opacity="0.5" />
+    
+    <!-- Sheet 2 (Middle) -->
+    <rect x="-10" y="10" width="160" height="220" rx="8" fill="url(#paperGrad)" stroke="rgba(255,255,255,0.08)" stroke-width="2" opacity="0.8" transform="rotate(-5)"/>
+    
+    <!-- Sheet 1 (Front) -->
+    <g transform="rotate(-10)">
+      <rect x="0" y="0" width="160" height="220" rx="8" fill="url(#paperGrad)" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+      
+      <!-- Fake Text Lines on Paper -->
+      <line x1="20" y1="30" x2="70" y2="30" stroke="#ffd166" stroke-width="4" stroke-linecap="round"/>
+      <line x1="20" y1="60" x2="140" y2="60" stroke="#f8efe4" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+      <line x1="20" y1="80" x2="130" y2="80" stroke="#f8efe4" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+      <line x1="20" y1="100" x2="140" y2="100" stroke="#f8efe4" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+      <line x1="20" y1="120" x2="110" y2="120" stroke="#f8efe4" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
+      <line x1="20" y1="150" x2="80" y2="150" stroke="#ff5ca8" stroke-width="3" stroke-linecap="round"/>
+      <line x1="20" y1="180" x2="130" y2="180" stroke="#f8efe4" stroke-width="2" stroke-linecap="round" opacity="0.4"/>
+    </g>
+  </g>
+
+  <!-- Typography / Title -->
+  <g transform="translate(80, 160)">
+    <text x="0" y="0" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="20" fill="#50e3ff" letter-spacing="4" opacity="0.9">ZABAL ANTHEM</text>
+    <text x="0" y="60" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="64" fill="url(#textGrad)" letter-spacing="-1">READ THE</text>
+    <text x="0" y="120" font-family="system-ui, -apple-system, sans-serif" font-weight="900" font-size="64" fill="url(#textGrad)" letter-spacing="-1">PAPERS</text>
+    <text x="0" y="165" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="16" fill="#aeb9c5" letter-spacing="1" opacity="0.8">GHOSTMINTOPS x DREAMNET</text>
+  </g>
+
+  <!-- Border Frame -->
+  <rect x="15" y="15" width="770" height="420" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+</svg>

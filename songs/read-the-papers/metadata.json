@@ -1,0 +1,43 @@
+{
+  "schema": "dreamnet.song_drop.v1",
+  "title": "Read The Papers",
+  "artist": "Brandon / GhostmintOps",
+  "project": "DreamNet Songs",
+  "event": "ZABAL Gamez July Open Build Month",
+  "track": "Artist",
+  "source": {
+    "platform": "Suno",
+    "publicUrl": "[paste Suno song URL here]",
+    "resolvedTitle": "Read The Papers",
+    "observedAuthor": "brandonducar1234",
+    "audioExportStatus": "pending_export",
+    "videoExportStatus": "pending_export"
+  },
+  "description": "An upbeat alt-pop / hip-hop bounce builder anthem celebrating open-source, building in public, and the ZAO ecosystem.",
+  "status": "staged_draft",
+  "rightsNote": "Created by Brandon in Suno Pro. Confirm final release terms against the active Suno subscription and exported audio file before distribution.",
+  "links": {
+    "livePage": "https://dreamnet-songs.pages.dev/songs/read-the-papers/",
+    "hostedAudio": "https://dreamnet-songs.pages.dev/songs/read-the-papers/assets/read-the-papers.wav",
+    "hostedVideo": "https://dreamnet-songs.pages.dev/songs/read-the-papers/assets/read-the-papers.mp4",
+    "suno": "[paste Suno song URL here]",
+    "zabalGamez": "https://zabalgamez.com",
+    "proofDrop": "https://proof-drop-zabal.pages.dev"
+  },
+  "audio": {
+    "file": "assets/read-the-papers.wav",
+    "format": "wav",
+    "sha256": "[calculate audio SHA-256 after export]",
+    "sizeBytes": 0,
+    "sourceMaster": "full-quality Suno WAV export",
+    "webEncoding": "24 kHz stereo WAV derived from the Suno export for Cloudflare Pages file-size compatibility."
+  },
+  "video": {
+    "file": "assets/read-the-papers.mp4",
+    "format": "mp4",
+    "sha256": "[calculate video SHA-256 after export]",
+    "sizeBytes": 0,
+    "source": "Suno exported video hosted in the public song drop."
+  },
+  "createdAt": "2026-07-05T00:00:00-04:00"
+}

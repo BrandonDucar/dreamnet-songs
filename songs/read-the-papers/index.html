@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Read The Papers | DreamNet Songs</title>
+    <meta
+      name="description"
+      content="Read The Papers is an original ZABAL builder anthem by Brandon / GhostmintOps, staged as a DreamNet song drop celebrating public builders."
+    />
+    <meta property="og:title" content="Read The Papers" />
+    <meta
+      property="og:description"
+      content="A ZABAL builder anthem: open the page, open the door."
+    />
+    <meta property="og:type" content="music.song" />
+    <meta property="og:image" content="./assets/read-the-papers-cover.svg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Read The Papers" />
+    <meta name="twitter:description" content="A ZABAL builder anthem staged as a DreamNet song drop." />
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #07090d;
+        --panel: rgba(18, 23, 31, 0.88);
+        --line: rgba(255, 255, 255, 0.14);
+        --text: #f8efe4;
+        --muted: #aeb9c5;
+        --gold: #ffd166;
+        --pink: #ff5ca8;
+        --cyan: #50e3ff;
+        --green: #84ffad;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        background:
+          linear-gradient(135deg, rgba(255, 92, 168, 0.13), transparent 32%),
+          radial-gradient(circle at 80% 15%, rgba(80, 227, 255, 0.2), transparent 32%),
+          var(--bg);
+        color: var(--text);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(1120px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 44px 0 64px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(280px, 440px);
+        gap: 28px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        margin: 0 0 14px;
+        color: var(--cyan);
+        font-size: 13px;
+        font-weight: 850;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(44px, 8vw, 104px);
+        line-height: 0.9;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 680px;
+        margin: 24px 0 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.58;
+      }
+
+      .cover {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        overflow: hidden;
+        background: #0d1118;
+        box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+      }
+
+      .cover img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+      }
+
+      .video-panel {
+        margin-top: 18px;
+        border: 1px solid rgba(255, 209, 102, 0.26);
+        border-radius: 8px;
+        padding: 14px;
+        background: rgba(255, 209, 102, 0.07);
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 6px;
+        background: #05070b;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .button,
+      button {
+        min-height: 44px;
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        border-radius: 6px;
+        padding: 0 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        color: #07090d;
+        background: linear-gradient(135deg, var(--gold), var(--pink));
+        font: inherit;
+        font-weight: 850;
+        text-decoration: none;
+        cursor: pointer;
+      }
+
+      .button.secondary,
+      button.secondary {
+        color: var(--text);
+        background: #141a22;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 28px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        padding: 18px;
+        background: var(--panel);
+      }
+
+      h2,
+      h3 {
+        margin: 0 0 10px;
+        font-size: 18px;
+      }
+
+      p,
+      li,
+      pre {
+        color: var(--muted);
+        line-height: 1.55;
+      }
+
+      .stamp {
+        color: var(--gold);
+        font-weight: 850;
+      }
+
+      pre {
+        margin: 0;
+        white-space: pre-wrap;
+        font: inherit;
+      }
+
+      .listen-card {
+        margin-top: 16px;
+      }
+
+      .audio-panel {
+        margin-top: 18px;
+        border: 1px solid rgba(80, 227, 255, 0.24);
+        border-radius: 8px;
+        padding: 14px;
+        background: rgba(80, 227, 255, 0.06);
+      }
+
+      audio {
+        width: 100%;
+        margin-top: 10px;
+      }
+
+      .audio-note {
+        margin: 8px 0 0;
+        color: var(--muted);
+        font-size: 13px;
+      }
+
+      @media (max-width: 860px) {
+        .hero,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">ZABAL Gamez July music drop</p>
+          <h1>Read The Papers</h1>
+          <p class="lead">
+            An upbeat, optimistic builder anthem: open the page, bring the proof, and build the whole thing in a day.
+          </p>
+          <div class="actions">
+            <a class="button secondary" href="./metadata.json">Metadata JSON</a>
+            <a class="button secondary" href="./lyrics.md">Lyrics</a>
+            <button class="secondary" id="copy">Copy POIDH checklist</button>
+          </div>
+          <div class="audio-panel" id="audioPanel">
+            <strong id="audioTitle">Hosted audio pending</strong>
+            <audio id="audioPlayer" controls preload="metadata" hidden>
+              <source src="./assets/read-the-papers.mp3" type="audio/mpeg" />
+            </audio>
+            <p class="audio-note" id="audioNote">
+              Suno generation pending. Once the Suno track is rendered, Brandon will download and drop the audio files into this folder.
+            </p>
+          </div>
+        </div>
+        <div class="cover">
+          <img src="./assets/read-the-papers-cover.svg" alt="Read The Papers cover art" />
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="card">
+          <h2>Track Notes</h2>
+          <p><strong>Source:</strong> Suno Pro (pending)</p>
+          <p><strong>Status:</strong> <span class="stamp">Draft staged</span></p>
+          <p><strong>Export:</strong> Audio/video pending upload</p>
+        </article>
+
+        <article class="card">
+          <h2>Submission Fit</h2>
+          <p>
+            An upbeat alt-pop / hip-hop bounce builder anthem celebrating the ZAO whitepaper and the public-build movement of ZABAL Gamez.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Receipt Path</h2>
+          <p>
+            This song page will be registered in Proof Drop once the Suno export is complete, establishing a verified link between music, lyrics, and metadata.
+          </p>
+        </article>
+      </section>
+
+      <section class="card listen-card">
+        <h2>Chorus</h2>
+        <pre>Read the papers, make it real
+Take the spark and build the wheel
+Bring the proof, bring the sound
+Put your work where the people are now
+Read the papers, catch the wave
+Tiny little moves turn brave
+If we all show up and play
+We can build the whole thing in a day</pre>
+      </section>
+    </main>
+
+    <script>
+      const checklist = `ZABAL Gamez July submission checklist
+
+Build title: Read The Papers
+Track: Artist
+Public URL: https://dreamnet-songs.pages.dev/songs/read-the-papers/
+Song URL: [pending]
+Proof photo: Brandon at computer or phone with this page open
+Build artifact: hosted WAV, hosted MP4, song page, metadata, cover, lyrics, public Suno URL
+Audio SHA-256: [pending]
+Video SHA-256: [pending]
+POIDH note: Original ZABAL builder anthem by Brandon / GhostmintOps for ZABAL Gamez July open build month.
+Farcaster channel: /zabal
+X tag: @bettercallzaal`;
+
+      document.getElementById('copy').addEventListener('click', () => {
+        navigator.clipboard.writeText(checklist).then(() => {
+          alert('Checklist copied to clipboard!');
+        });
+      });
+    </script>
+  </body>
+</html>
