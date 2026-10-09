@@ -31,3 +31,7 @@ This repo is a static site and can be deployed to Cloudflare Pages:
 ```bash
 wrangler pages deploy . --project-name dreamnet-songs
 ```
+
+## License
+
+Original software and project documentation are licensed under Apache-2.0. See [LICENSE](LICENSE). See [NOTICE](NOTICE) for attribution, licensing scope and third-party/media exclusions.
